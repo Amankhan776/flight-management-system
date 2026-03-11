@@ -1,0 +1,28 @@
+<table border="1">
+ 
+<tr>
+<th>ID</th>
+<th>Flight Number</th>
+<th>Airline</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Price</th>
+<th>Action</th>
+</tr>
+ 
+<tr th:each="flight : ${flights}">
+<td th:text="${flight.flightId}"></td>
+<td th:text="${flight.flightNumber}"></td>
+<td th:text="${flight.airlineName}"></td>
+<td th:text="${flight.source}"></td>
+<td th:text="${flight.destination}"></td>
+<td th:text="${flight.price}"></td>
+ 
+<td>
+<a th:href="@{/updateFlight/{id}(id=${flight.flightId})}">Update</a>
+<a th:href="@{/deleteFlight/{id}(id=${flight.flightId})}">Delete</a>
+</td>
+ 
+</tr>
+ 
+</table>

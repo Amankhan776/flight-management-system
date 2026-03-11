@@ -1,0 +1,19 @@
+<form action="/updateFlight" method="post">
+ 
+<input type="hidden" name="flightId" th:value="${flight.flightId}">
+ 
+Airline Name:
+<input type="text" name="airlineName" th:value="${flight.airlineName}"><br>
+ 
+Source:
+<input type="text" name="source" th:value="${flight.source}"><br>
+ 
+Destination:
+<input type="text" name="destination" th:value="${flight.destination}"><br>
+ 
+Price:
+<input type="number" name="price" th:value="${flight.price}"><br>
+ 
+<button type="submit">Update Flight</button>
+ 
+</form>
